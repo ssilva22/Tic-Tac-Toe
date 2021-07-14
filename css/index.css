@@ -26,6 +26,7 @@ body {
     align-items: center;
     border-radius: 50px;
     border: 2px solid #fc6986;
+   margin-top: 1.5em;
 }
 .title{
     max-width: 500px;
@@ -116,4 +117,8 @@ h1{
     h1{
         font-size: 2.8em;
     }
+}
+
+.left{
+    padding-bottom: 5em;
 }
