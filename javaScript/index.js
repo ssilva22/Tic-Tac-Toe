@@ -5,6 +5,11 @@ let game= new Game();
 let gameView = new Gameview();
 let tiles= document.querySelectorAll(".board-tile");
 
+document.querySelector(".restart").addEventListener("click",
+() => {
+    RestartGame();
+})
+
 
 
 
@@ -18,5 +23,9 @@ tiles.forEach((tile)=>{
 function OnTileClick(i){
     game.makeMove(i);
     gameView.updateBoard(game);
-    game.nexTurn();
+}
+
+function RestartGame(){
+    game = new Game();
+    gameView.updateBoard(game);
 }

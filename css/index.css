@@ -13,8 +13,9 @@ body {
     height: 800px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 80px;
 }
 
 .restart {
@@ -26,9 +27,11 @@ body {
     border-radius: 50px;
     border: 2px solid #fc6986;
 }
-
+.title{
+    max-width: 500px;
+}
 h1{
-    font-size: 3em;
+    font-size: 2.6em;
 }
 
 .restart:hover{
@@ -52,6 +55,16 @@ h1{
     flex: 1;
     border-bottom: 5px solid #eee;
     padding-bottom:8px
+}
+
+.player-x.active{
+    color: #42BED7;
+    border-color: #42BED7;
+}
+
+.player-o.active{
+    color: #d7bafb;
+    border-color: #d7bafb;
 }
 
 .board {
@@ -82,4 +95,25 @@ h1{
 
 .board-tile:hover{
     background: #eee;
+}
+
+.tile-x{
+    color: #42BED7 ;
+}
+
+.tile-o {
+    color: #d7bafb;
+}
+
+.tile-winner span{
+    color: #23ce6b;
+}
+
+@media only screen and (max-width:1200px){
+    .wrapper{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 2.8em;
+    }
 }
