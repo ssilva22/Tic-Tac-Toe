@@ -27,12 +27,18 @@ body {
     border: 2px solid #fc6986;
 }
 
+h1{
+    font-size: 3em;
+}
+
 .restart:hover{
     background: #4c6986;
     color: white;
 }
 
 .game{
+    display: flex;
+    flex-direction: column;
     width: 500px;
     height: 500px;
 }
@@ -40,4 +46,40 @@ body {
     display: flex;
     color: #9a9a9a;
     font-size: 24px;
+}
+
+.header .player-x ,.header .player-o{
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    padding-bottom:8px
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 0px;
+    flex-grow: 1;
+
+}
+
+.board-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background: white;
+    cursor: pointer;
+}
+
+.board-tile:not(:nth-child(3n)) {
+    border-right: 3px solid rgba(137,163,189,0.8);
+}
+
+.board-tile:not(:nth-last-child(-n+3)) {
+    border-bottom: 3px solid rgba(137,163,189,0.8);
+}
+
+.board-tile:hover{
+    background: #eee;
 }
